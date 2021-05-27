@@ -7,7 +7,8 @@ def main():
     if option.lower() == "a":
         f.insert_csv_to_db()
     elif option.lower() == "b":
-        f.insert_data()
+        data = f.insert_data()
+        f.tuple_to_db(data)
     elif option.lower() == "c":
         f.update_data
 

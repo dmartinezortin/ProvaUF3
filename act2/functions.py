@@ -155,7 +155,7 @@ def insert_data():
         request_int(0, 1, "Valid: "), \
     # Es converteix a un diccionari
     data = (prospect_id, first_name,last_name,interview_date,telephone,grade,interviewer,valid)
-    tuple_to_db(data)
+    return data
 
 def update_data():
     try:
@@ -165,7 +165,12 @@ def update_data():
                                       database=creds['database'])
         crs = cnx.cursor()
         try:
-            crs.execute()
+            print("Possa les dades actualitzades...")
+            data = insert_data()
+            crs.execute("UPDATE prospects",
+                "SET prospect_id  = %s, ",
+                        "prospect_id  = %s, prospect_id  = %s, prospect_id  = %s, prospect_id  = %s, prospect_id  = %s, prospect_id  = %s, prospect_id  = %s"
+            )
 
             cnx.commit()
         except:
