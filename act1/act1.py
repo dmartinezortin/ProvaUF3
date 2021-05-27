@@ -1,4 +1,5 @@
 import functions as f
+STUDENTS_CSV = "files/students.csv"
 
 def main():
     adding = True
@@ -20,10 +21,10 @@ def main():
                 'grade':[grade]
                 }
         #Funcio per inserir al fitxer CSV
-        f.insert(data)
+        f.insert(STUDENTS_CSV, ['student_id','first_name','last_name','subject','grade'], data)
 
         #Funcio per sortir del bucle
-        adding = f.option()
+        adding = f.sn_option()
 
     #Funcio per mostrar els calculs
     f.median()
