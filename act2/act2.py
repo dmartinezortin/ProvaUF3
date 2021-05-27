@@ -8,7 +8,8 @@ def main():
         f.insert_csv_to_db()
     elif option.lower() == "b":
         f.insert_data()
-    elif option.lower()
+    elif option.lower() == "c":
+        f.update_data
 
 if __name__ == '__main__':
         main()
